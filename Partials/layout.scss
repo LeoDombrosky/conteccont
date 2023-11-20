@@ -1,0 +1,895 @@
+//CONTEUDO DA PRIMEIRA TELA.
+.container {
+    max-width: 79%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/*BG HOME*/
+.bg-home {
+    position: relative;
+    height: 100vh;
+    border-bottom: 3px solid white;
+}
+
+.bg-home:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: radial-gradient(circle, rgba(6, 18, 30, 0.1), #06121e), url("../img/img2.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+
+//-----HERO----------------
+.hero {
+    //border: 2px solid yellow;
+    color: $white-normal;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h2 {
+        //border: 2px solid rgb(133, 228, 245);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        //margin-top: -20px;
+        padding: 15px;
+        border-radius: 30px 0 10px 0;
+        background-color: rgb(89, 88, 90);
+        width: 55%;
+        animation: backInUp;
+        animation-duration: 3s;
+
+    }
+
+    p {
+        text-align: center;
+        margin: 14px 0;
+        padding: 1%;
+    }
+
+}
+
+@media screen and (max-width:1305px) {
+    .hero h2 {
+        width: 85%;
+        margin-top: 0%;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and(max-width:869px) {
+    .hero h2 {
+        width: 87%;
+    }
+}
+
+@media screen and(max-width:850px) {
+    .hero h2 {
+        width: 90%;
+    }
+}
+
+@media screen and(max-width:830px) {
+    .hero h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and(max-width:768px) {
+    .hero h2 {
+        width: 104%;
+        margin-top: -26%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containeres {
+        //border: 2px solid rgb(63, 241, 57);
+        align-items: center;
+        margin-left: 0px;
+        background-color: $primary-normal;
+        overflow: hidden;
+        color: $white-normal;
+        width: 97vw;
+        height: 100vh;
+        position: relative;
+        background-attachment: fixed;
+    }
+}
+
+.button-contact {
+    border: 2px solid rgb(38, 195, 206);
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-light;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+    transition: 0.3s;
+}
+
+.button-contact:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+//-------------ABRE   SECTION    SOBRE-----------
+
+.sobre {
+    //border: 6px solid rgb(92, 235, 240);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.bgsobre {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-image: radial-gradient(circle, rgba(6, 18, 30, 0.1), #06121e), url("../img/FRG/foto6.jpg");
+
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:900px) {
+    .sobre {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .bgsobre {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.titulo2 {
+    //border: 2px solid rgb(13, 73, 163);
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0%;
+    animation: backInUp;
+    animation-duration: 3s;
+}
+
+#titulo4 {
+    display: none;
+}
+
+//CELEBRANDO 42 ANOS WIDTH 865PX-------------------------------
+@media screen and (max-width:900px) {
+    .titulo2 {
+        //border:2px solid red;
+        display: none;
+    }
+
+    #titulo4 {
+        //border: 2px solid yellow;
+        display: flex;
+        margin-top: 3%;
+    }
+}
+
+//------------FECHA CELEBRANDO WIDTH:865PX------------------------
+
+@media screen and (max-width:555px) {
+    #titulo4 {
+        //border: 2px solid yellow;
+        font-size: 21px;
+        margin: 5% auto;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:376px) {
+    #titulo4 {
+        //border: 2px solid yellow;
+        font-size: 18px;
+
+    }
+}
+
+//CARD DO TEXTO SOBRE--------------
+.card {
+    display: flex;
+    //border: 1px solid rgb(44, 235, 19);
+    flex-direction: column;
+    width: 40%;
+    height: 68%;
+    padding: 25px;
+    background-color: #3f3f3f;
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    overflow: auto;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 5%;
+    box-sizing: border-box;
+    /* Para garantir que as bordas e preenchimento não afetem a largura */
+    animation: backInRight;
+    animation-duration: 3s;
+
+}
+
+@media screen and (max-width:900px) {
+
+    .card {
+        border: 1px solid rgb(251, 252, 250);
+        width: 90%;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+    }
+}
+
+@media screen and(max-width:768px) {
+    .card {
+        border: 1px solid rgb(251, 252, 250);
+        width: 90%;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .card {
+        border: 1px solid rgb(251, 252, 250);
+        top: 50%;
+    }
+}
+
+.card::before {
+    content: '';
+    //border: 2px solid rgb(24, 192, 66);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #f8f8fa;
+    border-right: 20px solid #f8f8fa;
+}
+
+/** Content **/
+.content {
+    //border: 2px solid rgb(153, 248, 190);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+//TEXTO DO SOBRE------
+.content p {
+    margin-right: 15px;
+    color: #b7b7b7; //COR DO TEXTO DO SOBRE 
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, #3f3f3f);
+}
+
+.content h3 {
+    color: rgb(249, 251, 252);
+    text-align: center;
+    margin: 0px auto;
+    font-size: 20px;
+    overflow: auto;
+
+}
+
+//TRACO EMBAIXO DO INICIO DO TEXTO SOBRE
+/*
+.content h3::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color: #4e4eee;
+    bottom: 1px;
+    left: 40px;
+    border-radius: 100px;
+    margin-top: 0px;
+}
+*/
+
+/** Read More/Less Button **/
+#read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color: #f8f8fa;
+    color: #313131;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: transparent;
+    color: #f8f8fa;
+    transition: all 0.2s ease-in-out;
+}
+
+/** Active **/
+.card.active .content {
+    height: 415px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0b0f3a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(161, 161, 161);
+}
+
+.card.active .content::before {
+    visibility: hidden;
+
+}
+
+.card.active .content h3::before {
+    content: '';
+    left: 33px;
+}
+
+//----------------------------FECHA SECTION SOBRE----------------------------------------
+//---------------------------------------------------------------------------------------
+// ------------------------------ABRE SERVÇOS--------------------------------------------
+
+section.module.parallax {
+    //border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+section.module.parallax h1,
+h2 {
+    //border: 2px solid yellow;
+    color: white;
+    display: flex;
+
+
+}
+
+@media screen and(max-width:1265px) {
+    #titulo3 {
+        //border: 2px solid rgb(0, 255, 76);
+        color: white;
+        top: 9%;
+        left: 64%;
+        font-size: 140%;
+    }
+}
+
+@media screen and(max-width:953px) {
+    #titulo3 {
+        top: 9%;
+        left: 63%;
+        font-size: 140%;
+    }
+}
+
+@media screen and(max-width:887px) {
+    #titulo3 {
+        top: 9%;
+        left: 63%;
+        font-size: 130%;
+    }
+}
+
+@media screen and(max-width:845px) {
+    #titulo3 {
+        top: 9%;
+        left: 32%;
+        font-size: 151%;
+        ;
+    }
+}
+
+
+@media screen and(max-width:768px) {
+
+    //border: 2px solid red;
+    #titulo3 {
+        top: 9%;
+        left: 26%;
+        font-size: 151%;
+    }
+}
+
+section.module.parallax h2 {
+    position: absolute;
+    top: 8%;
+    right: 17%;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+section.module.parallax-1 {
+
+    background-image: radial-gradient(circle, rgba(6, 18, 30, 0.1), #06121e), url("../img/img2.jpg");
+    height: 100vh;
+}
+
+.containeres2 {
+    //border:2px solid rgb(175, 202, 238);
+    width: 100%;
+    height: 100vh;
+}
+
+//serviços----------------------
+.services {
+    //border: 2px solid red;
+    color: white;
+    border: 2px solid rgb(255, 253, 253);
+    border-radius: 10px 0 10px 0;
+    width: 30%;
+    height: 65%;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    padding-top: 20px;
+    align-items: center;
+    text-align: left;
+    margin-left: 59%;
+    z-index: 99;
+}
+
+@media screen and (max-width: 1090px) {
+
+    //TITULO DOS SERVIÇOS
+    section.module.parallax h2 {
+        right: 14%;
+    }
+
+    .services {
+        width: 35%;
+    }
+
+}
+
+@media screen and(max-width:845px) {
+    .services {
+        width: 75%;
+        justify-content: left;
+        margin: auto;
+    }
+}
+
+.li1 {
+    font-size: 15px;
+}
+
+@media screen and(max-width:845px) {
+    .li1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    //CX DOS ITENS DE SERVIÇOS
+    .services {
+        color: white;
+        border: 2px solid rgb(231, 204, 240);
+        width: 90%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        left: 6%;
+        padding-top: 30px;
+    }
+
+    //LISTA DE SERVIÇOS - CADA LINHA MENU MOBILE
+    .li1 {
+        text-align: left;
+        margin-left: 15px;
+    }
+}
+
+@media screen and(max-width:376px) {
+    #titulo3 {
+        top: 8%;
+        left: 22%;
+        font-size: 135%;
+    }
+
+    .services {
+        width: 90%;
+        justify-content: left;
+        margin: 5px auto;
+        height: 80%;
+        z-index: 99;
+    }
+
+    .li1 {
+        text-align: left;
+        margin-left: 0px;
+    }
+}
+
+//---------------------------------------------FECHA SERVIÇOS----------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//--------------------------------------------------ABRE MAPAS---------------------------------------
+
+//DIV MAPA MENU 
+.mapa {
+    //border: 2px solid rgb(250, 37, 204);
+    border-top: 3px solid $white-normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-image: radial-gradient(circle, rgba(6, 18, 30, 0.1), #06121e), url("../img/cidade.jpg");
+    //background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    //background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    //background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+.titulomapa {
+    display: flex;
+    flex-direction: column;
+    //border:2px solid green;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 6%;
+    color: $white-normal;
+}
+
+.mapa p {
+    color: #fefbff;
+    display: flex;
+    width: 36%;
+    padding: 14px;
+    text-align: center;
+    height: 50%;
+    flex-wrap: wrap;
+    margin-top: 4%;
+    margin-left: 11%;
+    font-size: 22px;
+}
+
+@media screen and (max-width:1280px) {
+    .mapa p {
+        margin-top: 0%;
+        font-size: 20px;
+
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .titulomapa {
+        margin-top: -5%;
+    }
+
+    .mapa p {
+        margin-top: 0%;
+        font-size: 18px;
+
+    }
+}
+
+//DIV MAPA GOOGLE FRG
+.frg {
+    display: flex;
+    width: 45%;
+    height: 90%;
+    margin-top: 0%;
+    margin-left: 2%;
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 39%);
+}
+
+.frg iframe {
+    height: 100%;
+}
+
+@media screen and (max-width:935px) {
+    .titulomapa {
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+
+    .mapa p {
+        margin-top: 17%;
+        width: 38%;
+        font-size: 14px;
+        height: 45%;
+    }
+
+    .frg {
+        border: 2px solid rgb(94, 92, 238);
+        display: flex;
+        margin-top: -43%;
+        margin-left: 58%;
+        width: 40%;
+        height: 67%;
+    }
+}
+
+@media screen and (max-width:374px) {
+    .frg {
+        margin-top: -40%;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    .titulomapa {
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+
+    .mapa p {
+        margin-top: 1%;
+        width: 81%;
+        font-size: 14px;
+
+    }
+
+    .frg {
+        border: 2px solid rgb(94, 92, 238);
+        display: flex;
+        margin-top: -20%;
+        margin-left: 0%;
+        width: 100%;
+        height: 61%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .titulomapa {
+        margin-top: 0%;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .titulomapa {
+        margin-top: 3%;
+    }
+
+    .mapa p {
+        width: 91%;
+        margin: 10px auto;
+    }
+
+    .frg {
+        height: 41%;
+    }
+}
+
+//----------------------------------------FECHA MAPAS-------------------------------------
+//----------------------------------------------------------------------------------------
+//---------------------------------------ABRE FOOTER ------------------------------------- 
+footer{
+    color: white;
+}
+    .rodape {
+        //border:2px solid red;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .footer-icons{
+        justify-content: center;
+    }
+
+    .logorodape{
+        width:25%;
+        margin: 3% auto;
+    }
+    .anos2{
+        //border:2px solid green;
+        width:24%;
+        margin-top:-12%;
+        margin-left: 75%;
+    }
+
+    .endereco{
+        //border:2px solid white;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .frase{
+        //border:2px solid yellow;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .direitos{
+        border:2px solid #3f3f3f;
+        justify-content: center;
+        text-align: center;
+        background-color: #3f3f3f;
+        width: 100%;
+        height: 27px;
+    }
+    //-------------------BOTAO ZAP-------------
+    .btn-zap {
+        position: fixed;
+        bottom: 34px;
+        right: 14px;
+        z-index: 99;
+
+        img {
+            max-width: 54px;
+            transition: transform 0.4s;
+            position: fixed;
+            bottom: 35px;
+            right: 44px;
+        }
+
+        img:hover {
+            transform: scale(1.5);
+        }
+
+    }
+    @media screen and (max-width:850px){
+        .direitos{
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width:768px) {
+
+        // BOTAO DO ZAP MOBILE
+        .btn-zap {
+            img {
+                max-width: 54px;
+                bottom: 70px;
+            }
+        }
+    }
+
+    //BOTAO ZAP TEXTO DO TOOLTIP----
+    .btn-zap .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        width: 180px;
+        top: -40px;
+        left: -280px;
+        padding: 4px;
+        border-radius: 8px;
+        text-align: center;
+        background-color: $black-normal;
+        color: $white-normal;
+        opacity: 0;
+        transition: opacity 0.4s;
+
+    }
+
+    //BOTAO ZAP HOVER TEXTO DO TOOLTIP----
+    .btn-zap:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+//-------------------------------------FECHA FOOTER----------------------------
+
+@media screen and (max-width:1185px){
+    .logorodape{
+        width:30%;
+    }
+}
+@media screen and (max-width:990px){
+    .logorodape{
+        width:35%;
+    }
+}
+@media screen and (max-width:700px){
+    .logorodape{
+        //border:2px solid white;
+        width: 40%;
+        margin-top: -2%;
+    }
+    .anos2{
+        //border:2px solid blue;
+        width: 25%;
+        margin-top: -16%;
+    }
+}
+
+@media screen and (max-width:665px){
+    .logorodape{
+        width: 53%;
+    }
+    .anos2{
+        margin-left: 68%;
+        width: 44%;
+    }
+}
+
+@media screen and (max-width:547px){
+    .endereco{
+        font-size: 12px;
+    }
+    .frase{
+        font-size: 14px;
+    }
+    .direitos{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,51 @@
+
+
+@import"Partials/_colors.scss";/*importando as cores a serem usadas*/
+@import"Partials/_header.scss";/*css header*/
+@import"Partials/layout.scss";/* css layout*/
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'sora', sans sans-serif;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    background-color: $primary-normal;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:768px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width:440px) {
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+button{
+    font-family: Sora, sans-serif;
+    cursor: pointer;
+}
+
+svg{ /*para ter uma imagem bem fluida, leve e buscando usa  todo o espaco*/
+    width: 100%;
+}
+
+img{
+    width: 100%; 
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+

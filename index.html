@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--importando animacoes-->
+    <!--abaixo importamos as fontes do google, adicionamos a barra "/>" no final de cada link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Sora:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--abaixo link importando icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--abaixo importando CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--css para bootstrap-->
+    <style>
+        /*------------div das imagens----------------*/
+        .cxslides {
+            /*border: 3px solid white;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);*/
+            border-radius: 10px;
+            width: 52%;
+            height: 75vh;
+            margin-left: 5%;
+            animation: backInLeft;
+            animation-duration: 3s;
+        }
+
+        @media screen and (max-width:900px) {
+            .cxslides {
+                border: 2px solid rgb(250, 251, 252);
+                width: 90%;
+                height: 38vh;
+                position:absolute;
+                top:10%;
+                left: 0%;
+            }
+            
+        }
+        /*-------cx slides width 768--------*/
+        @media screen and (max-width:768px) {
+            .cxslides {
+                border: 2px solid rgb(250, 251, 252);
+                width: 90%;
+                height: 38vh;
+                position:absolute;
+                top:10%;
+                left: 0%;
+            }
+            
+        }/*-------fecha cx slides width 768--------*/
+
+/*----------------borda por fora da imagem---------*/
+        .carousel-inner {
+            border: 6px solid rgb(251, 252, 250);
+            width: 99%;
+            max-height: 70vh;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 10px;
+            transition-duration: 5s;
+        }
+
+        /*-----imagem dos slides tam normal------*/
+        .carousel-inner img {
+            border: 1px solid rgb(246, 248, 248);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 97%;
+            
+        }
+
+        /*--------------tela width 900----------------*/
+        @media screen and (max-width:900px){
+
+            /*---imagem dos slides 900-----*/
+            .carousel-inner {
+                display: flex;
+                border: 2px solid rgb(250, 252, 252);
+                width: 100%;
+                margin: 0px auto;
+                height: 30vh;                
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+                border-radius: 10px;
+            }
+        
+        }
+
+        /*------------------tela width 768-------------*/
+        @media screen and (max-width:768px){
+            /*-----borda por fora da imagem 768px-----*/
+            .carousel-inner {
+                display: flex;
+                border: 2px solid rgb(250, 252, 252);
+                width: 100%;
+                margin: auto;
+                height: 30vh;                
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+                border-radius: 10px;
+            }
+            /*------imagem dos slides tela 768px---------*/
+            .carousel-inner img {
+                border:2px solid rgb(251, 252, 253);           
+                object-fit: cover;
+            }
+        }
+    </style>
+
+    <!--titulo do site-->
+    <title>CONTEC Contabilidade</title>
+</head>
+
+<body>
+    <div class="bg-home">
+        <header>
+            <nav class="header-content container">
+                <div class="header-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok fa-2x"></i>
+                    </a>
+                </div>
+                <div class="header-logo">
+                    <img src="img/logotransp .png" alt="Logo oficial">
+                </div>
+                <div>
+                    <a class="header-button" href="#">
+                        Agendar Horario
+                    </a>
+                </div>
+
+            </nav>
+
+            <main class="hero container">
+                <!--<h1>CONTEC CONTABILIDADE TECNICA</h1>-->
+                <img class="anos" src="img/40anos.svg" alt="logo 40 anos">
+                <h2>Excelência Contábil para o Seu Sucesso Financeiro</h2>
+                <a class="button-contact" target="_blank" href="#">Agendar Horario</a>
+                <P>Horario de Atendimento das 09:00 as 18:00hras Seg a Sex.</P>
+            </main>
+        </header>
+        <!--fechamento Header-->
+    </div>
+    <!--fechamento div bg-home -->
+
+    <!----------------abre sobre------------------>
+    <section class="sobre">
+        <div class="bgsobre">
+            <h2 id="titulo4">Celebrando 42 Anos de Excelência</h2>
+            <div class="cxslides">
+                <!--abre caixa dos slide-->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <!------------borda por fora da imagem --------------->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/Xaxim/foto1.jpg" class="d-block w-100" alt="foto1xm">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Xaxim/foto2.jpg" class="d-block w-100" alt="foto2xm">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Xaxim/foto3.jpg" class="d-block w-100" alt="foto3xm">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Xaxim/foto4.jpg" class="d-block w-100" alt="foto4xm">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto1.jpg" class="d-block w-100" alt=".foto1frg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto2.jpg" class="d-block w-100" alt="foto2frg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto3.jpeg" class="d-block w-100" alt="foto3frg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto4.jpg" class="d-block w-100" alt="foto4frg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto5.jpg" class="d-block w-100" alt="foto5frg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FRG/foto6.jpg" class="d-block w-100" alt="foto6frg">
+                        </div>
+                    </div>
+                    <!----fecha borda por fora da imagem-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-------fecha DIV CXslides-->
+
+            <h2 class="titulo2">Celebrando 42 Anos de Excelência</h2>
+
+            <div class="card">
+                <!-- CARD -->
+                <!-- CONTENT -->
+                <div class="content">
+                    <h3>A Jornada da Contec Contabilidade Técnica</h3>
+                    <p>
+                        Há 42 anos, no pitoresco bairro do Xaxim, em Curitiba, nascia a Contec Contabilidade Técnica,
+                        uma empresa que viria a se tornar um símbolo de excelência na área contábil. Fundada pelo Sr.
+                        Joel Adalberto Moreschi, a empresa iniciou sua jornada com uma visão clara: oferecer soluções
+                        contábeis de qualidade excepcional que ajudariam os empresários a prosperar.
+
+                        Com uma dedicação incansável ao longo dos anos, o Sr. Moreschi estabeleceu uma base sólida para
+                        o crescimento da empresa, conquistando a confiança de inúmeros clientes e construindo
+                        relacionamentos duradouros. Sua visão e ética de trabalho serviram como alicerce para a Contec
+                        Contabilidade Técnica, moldando-a como uma empresa respeitada na comunidade empresarial de
+                        Curitiba.
+
+                        No entanto, 2023 trouxe uma triste notícia para a Contec e seus clientes. O Sr. Joel Adalberto
+                        Moreschi, o fundador e a mente por trás de tantos sucessos, nos deixou. Sua partida foi
+                        profundamente sentida, não apenas por sua família, mas por toda a equipe da Contec e seus
+                        clientes, que reconheciam o legado de competência e integridade que ele havia deixado para trás.
+
+                        Apesar dessa perda inestimável, o espírito da Contec Contabilidade Técnica continuou forte,
+                        graças à dedicação e ao compromisso de seus filhos, Leila Cristine Moreschi e Joel Adalberto
+                        Moreschi Junior. Eles escolheram seguir os passos do pai, comprometendo-se a manter os padrões
+                        de excelência estabelecidos por ele.
+
+                        Hoje, a Contec Contabilidade Técnica orgulha-se de sua trajetória de sucesso, marcada pela
+                        competência de seus líderes e funcionários. A empresa não apenas preservou a visão do fundador,
+                        mas também expandiu seus horizontes, abrindo uma nova sede na cidade de Fazenda Rio Grande,
+                        demonstrando um crescimento contínuo e comprometido com o atendimento de seus clientes em todo o
+                        Paraná.
+
+                        A Contec se destaca por sua equipe dedicada, que continua a fornecer soluções contábeis de alta
+                        qualidade e orientação precisa aos empresários da região. O legado do Sr. Joel Adalberto
+                        Moreschi vive através dos valores e princípios que ele propôs na empresa, e sua memória
+                        permanece como uma fonte de inspiração para todos os que fazem parte da família Contec.
+
+                        Com mais de quatro décadas de experiência e uma visão de futuro sólida, a Contec Contabilidade
+                        Técnica continua a ser um farol de competência e integridade na área contábil, servindo a
+                        comunidade empresarial com dedicação e paixão.</p>
+                    <p> <strong> "Honramos a memória do Sr. Joel Adalberto Moreschi e celebramos o presente e o futuro
+                            brilhante da Contec Contabilidade Técnica sob a liderança de seus dedicados filhos"</strong>
+                    </p>
+                </div>
+                <!--F READ MORE/LESS BUTTON -->
+                <button id="read_button">Leia mais</button>
+            </div>
+        </div>
+        <!--fecha background do sobre-->
+        <!--fecha CARD-->
+
+    </section>
+    <!----------------------------------fecha section cxslides---------------------------------->
+    <!------------------------------------------------------------------------------------------>
+    <!--------------------------------------ABRE SERVIÇOS--------------------------------------->
+    <div class="containeres2">
+        <section class="module parallax parallax-1">
+            <h2 id="titulo3">Nossos Serviços:</h2>
+            <div class="services">
+                <ul type="circle" class="lista">
+                    <li class="li1">Contabilidade
+                    <li class="li1">Departamento Fiscal
+                    <li class="li1">Departamento Pessoal
+                    <li class="li1">Abertura, Alteração e Baixa de Empresas
+                    <li class="li1">Consultoria e Assessoria Empresarial
+                    <li class="li1">Registro de Domesticas
+                    <li class="li1">Contabilidade de Igrejas, Associações e Condominio
+                    <li class="li1">Simulação e Entrada de Aposentadoria
+                    <li class="li1">Imposto de Renda Pessoa Fisica
+                    <li class="li1">Contrato de Locação
+                    <li class="li1">Contrato de Compra e Venda
+                    <li class="li1">Consultoria e Assessoria ao MEI
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--fechando section paralax-->
+    <!--//ABRE MAPA DO GOOGLEs-->
+    <div class="mapa">
+        <div class="titulomapa">
+            <h3>Venha Conhecer</h3>
+        </div>
+        <p>"Conquiste o sucesso financeiro com a ajuda de especialistas em nosso escritório de contabilidade. Estamos
+            prontos para desvendar os segredos do seu negócio e transformar desafios em oportunidades. Sua jornada para
+            uma contabilidade sólida e crescimento rentável começa aqui. Marque uma visita agora e dê o primeiro passo
+            rumo ao seu futuro financeiro brilhante!"</p>
+        <div class="frg">
+            <iframe width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7193.391167084178!2d-49.31545432229004!3d-25.648226999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcff83ef51895f%3A0xe3bbc0f1c015ab73!2sContec%20Contabilidade%20FRG!5e0!3m2!1spt-BR!2sbr!4v1696959040443!5m2!1spt-BR!2sbr"
+                width="600" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!--<a class="button-contact" target="_blank" href="#">Agendar Horario</a>-->
+        </div>
+
+    </div>
+    <!--//FECHA MAPAS-->
+
+    <footer>
+        <!--abre footer-->
+        <div class="rodape container">
+
+            <div class="footer-icons header-icons">
+                <a href="#">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok fa-2x"></i>
+                </a>
+            </div>
+
+            <div class="logorodape">
+                <!--logo footer-->
+                <img src="img/FRG/logo2.png" alt="logo site" />
+                <!--fecha selo foother-->
+            </div>
+            <!--fecha logo foother-->
+            <div class="anos2">
+                <!--selo footer-->
+                <img src="img/40anos.svg" alt="logo 40 anos">
+                <!--imagem logo-->
+            </div>
+            <div class="endereco">
+                <p class="fones">41 3346-6261  / 41 99824-5767</p>
+                <p class="end">Av Brasil 1901 - Eucaliptos - Fazenda Rio Grande - Parana</p>
+            </div>
+            <div class="frase">
+                <p class="frases">Deixe-nos cuidar dos números, enquanto você se concentra no crescimento do seu
+                    negócio.</p>
+            </div>
+            
+        </div>
+        <!--fecha rodape-->
+
+        <div class="direitos">
+            <p>Copyright 2023 | Dev LAD - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!--fecha titulo footer-->
+    <!--botao zap-->
+    <a href="https://api.whatsapp.com/send?phone=5541987550259&text=Agende seu Horario" class="btn-zap" target="_blank">
+        <img src="img/whatssapp.svg" alt="botao zap">
+        <span class="tooltip-text">Agende seu Horario</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

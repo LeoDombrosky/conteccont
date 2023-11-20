@@ -1,0 +1,263 @@
+/*menu header*/
+header {
+    width: 100%;
+    //border:2px solid green;  
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*cria espacos entre os itens do header*/
+
+}
+
+.hero a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    color: $white-normal;
+}
+
+.header-icons {
+    display: flex;
+    gap: 14px;
+    /*assim como justify-content, o GAP tbm cria espacos entre os icones, neste caso, os simbolos do facebook, instagran e tiktok*/
+}
+
+.header-icons a:hover {
+    i {
+        animation: translateY 0.8s infinite alternate;
+        /*chama a animacao dos botoes das redes sociais*/
+        color: $red-light;
+    }
+}
+
+/*criando animacao para icos de redes sociais, face, intagran*/
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button {
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background: transparent;
+    transition: 0.4s;
+}
+
+.header-button:hover {
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+
+.header-logo {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 7%;
+}
+
+.header-logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.anos {
+    //border: 2px solid red;
+    display: flex;
+    height: auto;
+    width: 20%;
+    margin-top: -20%;
+    margin-left: 84%;
+    animation: tada;
+    animation-duration: 6s;
+    animation-delay: 11s;
+    animation-iteration-count: infinite;
+    transition: 1.5s;
+}
+
+
+/********* MENU MOBILE HEADER ******************/
+@media screen and (max-width:900px){
+    .anos{
+        margin-top: 2%;
+        margin-left: 54%;
+        margin-bottom: 5%;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*tela menor que 768px, ativa menu mobile e executa as acoes abaixo*/
+    .header-content {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+
+        i {
+            /*tammanho dos botoes das redes socias*/
+            margin-top: 10px;
+            font-size: 32px;
+
+        }
+    }
+
+    .header-icons {
+        margin-bottom: 20px;
+    }
+
+    .header-logo {
+        //border: 2px solid red;
+        margin-right: 2%;
+        margin-bottom: 10px;
+    }
+
+    .header-logo img {
+        width: 105%;
+        height: auto;
+    }
+
+    .anos {
+        //border: 2px solid rgb(240, 237, 237);
+        flex-direction: column;
+        position: absolute;
+        top: 33%;
+        right: 11%;
+        opacity: 0.8;
+        width: 19%;
+    }
+
+
+    .hero a {
+        position: relative;
+        top: 30px;
+        left: 8px;
+        margin-bottom: 50px;
+        //background-color: aqua;
+
+    }
+
+    //HORARIO DE ATENDIMENTO
+    .hero p {
+        margin-bottom: 45px;
+        margin-left: 5px;
+    }
+
+    //BOTAO AGENDAR TRANSPARENTE, SOME NO MENU MOBILE
+    .header-button {
+        display: none;
+        /*retira o botao de agendar no modo mobile*/
+
+    }
+}
+
+//--------------fecha  width 768px--------------
+//----------abre width 720px---------------
+@media screen and (max-width:720px) {
+    .anos {
+        top: 29%;
+    }
+
+}
+
+@media screen and (max-width:665px) {
+    .header-logo {
+        width: 48%;
+    }
+
+    .hero h1 {
+        margin-top: 20px;
+        font-size: 19px;
+    }
+
+    .hero p {
+        width: 98%;
+        font-size: 11px;
+    }
+
+    .hero h2 {
+        width: 80%;
+        font-size: 13px;
+    }
+
+    .anos {
+        width: 30%;
+        top: 41%;
+        left: 9%;
+    }
+}
+
+
+@media screen and (max-width:560px) {
+    .hero h2 {
+        font-size: 10px;
+    }
+    .anos{
+        top:36%
+    }
+}
+@media screen and (max-width:555px){
+    .hero h2{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:501px){
+    .hero h2{
+        margin-top: 3%;
+        font-size: 8px;
+    }
+    .anos{
+        top:35%;
+    }
+}
+
+
+@media screen and (max-width:376px) {
+    .hero h1 {
+        font-size: 14px;
+
+
+    }
+
+    .hero h2 {
+        margin-top: 10px;
+    }
+
+    .header-logo {
+        width: 65%;
+    }
+
+    .anos {
+        //border: 2px solid green;
+        width: 40%;
+        top: 53%;
+        right: 2%;
+    }
+
+    .hero p {
+        margin-top: 5%;
+        width: 98%;
+        font-size: 10px;
+    }
+}
